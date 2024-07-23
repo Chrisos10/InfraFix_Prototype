@@ -69,7 +69,7 @@
         </div>
         <div class="card">
           <img src="{% static 'assets/img/icons/presentation.png' %}">
-          <h4>All Reported Problem</h4>
+          <h4>All Reported Issues</h4>
           <div class="per">
             <table>
               <tr>
@@ -83,7 +83,7 @@
         </div>
         <div class="card">
           <img src="{% static 'assets/img/icons/checked.png' %}">
-          <h4>Complete property</h4>
+          <h4>Fixed Issues</h4>
           <div class="per">
             <table>
               <tr>
@@ -98,11 +98,11 @@
         </div>
         <div class="card">
           <img src="{% static 'assets/img/icons/cancel.png' %}">
-          <h4>UnComplete property</h4>
+          <h4>Unattended Issues</h4>
           <div class="per">
             <table>
               <tr>
-                <td><span>{{ number_uncomplete }}</span></td>
+                <td><span>{{ number_incomplete }}</span></td>
               </tr>
               <tr>
                 <td>Property</td>
@@ -149,7 +149,7 @@
 
       <section class="attendance">
         <div class="attendance-list">
-          <h1>List Of Problems</h1>
+          <h1>List Of Reported Issues</h1>
           <table class="table">
             <thead>
               <tr>
@@ -169,7 +169,7 @@
                 <td nowrap="nowrap"><a href="{% url 'datail' data.id %}" style="text-decoration: none;">{{data.title}}</a></td>
                 <td>03-24-22</td>
                 <td>{{data.district}},{{data.sector}}</td>
-                <td><button>uncomplete</button></td>
+                <td><button>incomplete</button></td>
               </tr>
               {% endfor %}
               
@@ -182,7 +182,7 @@
 
       <section class="attendance">
         <div class="attendance-list">
-          <h1>List Of Complete Problem</h1>
+          <h1>Pending Inquiries</h1>
           <table class="table">
             <thead>
               <tr>
@@ -195,14 +195,14 @@
               </tr>
             </thead>
             <tbody>
-              {% for uncomplete in uncompletes %}
+              {% for incomplete in incompletes %}
               <tr>
-                <td>RP-{{uncomplete.id}}</td>
-                <td>{{uncomplete.poster}}</td>
-                <td nowrap="nowrap"><a href="{% url 'datail' uncomplete.id %}" style="text-decoration: none;">{{uncomplete.title}}</a></td>
+                <td>RP-{{incomplete.id}}</td>
+                <td>{{incomplete.poster}}</td>
+                <td nowrap="nowrap"><a href="{% url 'datail' incomplete.id %}" style="text-decoration: none;">{{incomplete.title}}</a></td>
                 <td>03-24-22</td>
-                <td>{{uncomplete.district}},{{uncomplete.sector}}</td>
-                <td><button><a href="{% url 'complete' uncomplete.id %}" style="width:50px;text-decoration: none;">uncomplete</a></button></td>
+                <td>{{incomplete.district}},{{incomplete.sector}}</td>
+                <td><button><a href="{% url 'complete' incomplete.id %}" style="width:50px;text-decoration: none;">incomplete</a></button></td>
               </tr>
               {% endfor %}
               
@@ -215,7 +215,7 @@
 
       <section class="attendance">
         <div class="attendance-list">
-          <h1>List Of Complete Problem</h1>
+          <h1>Summary Of Fixed Issues</h1>
           <table class="table">
             <thead>
               <tr>

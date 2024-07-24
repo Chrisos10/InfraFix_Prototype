@@ -1,5 +1,5 @@
 """
-ASGI config for geoLocations project.
+ASGI config for InfraFix project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

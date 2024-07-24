@@ -1,5 +1,5 @@
 """
-WSGI config for geoLocations project.
+WSGI config for InfraFix project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

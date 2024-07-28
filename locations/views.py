@@ -118,7 +118,7 @@ def login_request(request):
 				if user.is_staff == True:
 					return redirect("dashboard")
 				else:
-					return redirect("get_detail")
+					return redirect("home")
 
 			else:
 				messages.error(request,"Invalid username or password.")

@@ -133,7 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'locations.User'
 
 
-LOGIN_REDIRECT_URL = 'get_detail'
+LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
 
 

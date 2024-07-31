@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User,AbstractUser
 from django.utils import timezone
 from django.conf import settings
+from cloudinary.models import CloudinaryField
 
 
 
@@ -32,7 +33,7 @@ class Location(models.Model):
 	sector = models.CharField(max_length=50, null=True, blank=True)
 	status = models.BooleanField(default=False)
 	reported_time = models.DateTimeField(default=timezone.now)
-	image = models.ImageField(upload_to='properties/')
+	image = CloudinaryField('image', folder='properties')
 	description = models.TextField(default='devastation')
 
 	def __str__(self):

@@ -2,6 +2,7 @@
 InfraFix is an efficient channel for transmitting data and locations of damaged infrastructure, enhancing the awareness and responsiveness of responsible agencies.
 
 Check it out here: https://infrafix-prototype.onrender.com/
+
 (It might take too long to load due to the hosting services )
 
 ## Users Accomodation
@@ -21,36 +22,59 @@ The quickest way to access Infrafix is by visiting https://infrafix-prototype.on
 However if you want to run it on your local pc, follo these simple steps:
 
 - Clone the repo from github using the following command;
+```
 git clone https://github.com/Chrisos10/InfraFix_Prototype.git
+
+```
 
 - Open your a new bash terminal in vscode
 
 - Create a virtual environment named 'venv' using the following command;
-py -m venv venv   (Feel free to use any name for the virtual environment)
+```
+py -m venv venv
+
+```
 
 - Activate your virtual environment using the following code;
+```
 source venv/Scripts/activate
 
+```
 - Install all the requirements of the project.
+```
 pip install -r requirements.txt
 
+```
+
 - Create a '.env' file and paste the following:
+```
 SECRET_KEY
 DATABASE_URL
 CLOUD_NAME
 API_KEY
 API_SECRET
 
+```
 - make migrations using the following commands
-1. py manage.py makemigrations
-2. py migrate
+```
+py manage.py makemigrations
+   
+```
+```
+py migrate
 
+```
 - If you want to access the Django admin interface, create a superuser.
+```
 python manage.py createsuperuser
 
+```
 - Run the server.
+```
 py manage.py runserver
 
-Click on the link given to access InfraFix
+```
 
-Sign up and login see its features
+-Click on the link given to access InfraFix
+
+-Sign up and login see its features

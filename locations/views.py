@@ -64,10 +64,11 @@ def dashboard(request):
 	contacts=Contact.objects.all()
 	users = User.objects.all()
 	number_user = users.count()
-	uncompletes = Location.objects.filter(status=False)
-	number_uncomplete = uncompletes.count()
+	incompletes = Location.objects.filter(status=False)
+	number_incomplete = incompletes.count()
 	completes = Location.objects.filter(status=True)
 	number_complete =completes.count()
+	messages = Contact.objects.all()
 	
 	data_list = Location.objects.values_list('latitude', 'longitude')
 	map1 = folium.Map(location=[-1.952183, 30.054957], tiles='OpenStreetMap', zoom_start=9.5)
@@ -80,12 +81,13 @@ def dashboard(request):
 		'datas':datas,
 		'contacts':contacts,
 		'users':users,
-		'uncompletes':uncompletes,
+		'incompletes':incompletes,
 		'completes':completes,
 		'number_user':number_user,
-		'number_uncomplete':number_uncomplete,
+		'number_incomplete':number_incomplete,
 		'number_complete':number_complete,
 		'number_problem':number_problem,
+		'messages':messages,
 	}
 	return render(request, 'dashboard.html', context)
 

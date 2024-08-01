@@ -26,7 +26,7 @@ However if you want to run it on your local pc, follo these simple steps:
 git clone https://github.com/Chrisos10/InfraFix_Prototype.git
 ```
 
-- Open your a new bash terminal in vscode
+- Open a new bash terminal in vscode
 
 - Create a virtual environment named 'venv' using the following command;
 ```

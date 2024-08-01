@@ -24,7 +24,6 @@ However if you want to run it on your local pc, follo these simple steps:
 - Clone the repo from github using the following command;
 ```
 git clone https://github.com/Chrisos10/InfraFix_Prototype.git
-
 ```
 
 - Open your a new bash terminal in vscode
@@ -32,18 +31,15 @@ git clone https://github.com/Chrisos10/InfraFix_Prototype.git
 - Create a virtual environment named 'venv' using the following command;
 ```
 py -m venv venv
-
 ```
 
 - Activate your virtual environment using the following code;
 ```
 source venv/Scripts/activate
-
 ```
 - Install all the requirements of the project.
 ```
 pip install -r requirements.txt
-
 ```
 
 - Create a '.env' file and paste the following:
@@ -53,26 +49,21 @@ DATABASE_URL
 CLOUD_NAME
 API_KEY
 API_SECRET
-
 ```
 - make migrations using the following commands
 ```
 py manage.py makemigrations
-   
 ```
 ```
 py migrate
-
 ```
 - If you want to access the Django admin interface, create a superuser.
 ```
 python manage.py createsuperuser
-
 ```
 - Run the server.
 ```
 py manage.py runserver
-
 ```
 
 -Click on the link given to access InfraFix

@@ -156,7 +156,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Title</th>
-                <th>Date</th>
+                <th>Reported Time</th>
                 <th>Address</th>
               </tr>
             </thead>
@@ -187,7 +187,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Title</th>
-                <th>Date</th>
+                <th>Reported Time</th>
                 <th>Address</th>
                 <th>Status</th>
               </tr>
@@ -209,7 +209,7 @@
         </div>
       </section>
 
-      <!--  list of uncomplete problem -->
+      <!--  list of fixed issues -->
 
       <section class="attendance">
         <div class="attendance-list">
@@ -220,7 +220,6 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Title</th>
-                <th>Date</th>
                 <th>Address</th>
                 <th>Status</th>
               </tr>
@@ -231,7 +230,6 @@
                 <td>RP-{{complete.id}}</td>
                 <td>{{complete.poster}}</td>
                 <td nowrap="nowrap"><a href="{% url 'datail' complete.id %}" style="text-decoration: none;">{{complete.title}}</a></td>
-                <td>03-24-22</td>
                 <td>{{complete.district}},{{complete.sector}}</td>
                 <td><button>complete</button></td>
               </tr>
